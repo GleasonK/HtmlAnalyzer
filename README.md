@@ -5,7 +5,7 @@ Many websites hide interesting text in HTML comments, see [NYT article on White 
 
 Instead of wondering _how do they do that_ I decided to _make something to do that_.
 
-I'm only just getting, but I can promise one thing - the UI won't be pretty.
+I'm only just getting started, but I can promise one thing - the UI won't be pretty.
 
 # Brainstorm:
 - Scan for HTML comments and try to write some rules to filter out interesting ones
