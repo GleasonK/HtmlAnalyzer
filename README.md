@@ -17,6 +17,11 @@ Ref: [WhiteHouse.gov][2]
 ![Medium job link in dev console](https://github.com/GleasonK/HtmlAnalyzer/blob/main/images/Medium_Example.PNG?raw=true)
 Ref: [Medium.com][3]
 
+### Reddit also hides a job link in their dev console logs
+![Reddit job link in dev console](https://github.com/GleasonK/HtmlAnalyzer/blob/main/images/Reddit_Example.PNG?raw=true)
+Ref: [Reddit.com][5]
+
+
 ### My personal page has a prize for 10x devs
 ![KevinGleason.me dev console reward](https://github.com/GleasonK/HtmlAnalyzer/blob/main/images/PersonalSite_Example.PNG?raw=true)
 Ref: [KevinGleason.me][4]
@@ -32,3 +37,4 @@ Ref: [KevinGleason.me][4]
 [2]:https://www.whitehouse.gov/
 [3]:https://barackobama.medium.com/a-new-day-for-america-d4b04bda47d1
 [4]:https://www.kevingleason.me
+[5]:https://reddit.com
