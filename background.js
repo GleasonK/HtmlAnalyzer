@@ -11,20 +11,9 @@
 
 // This block is new!
 chrome.runtime.onMessage.addListener(
-        function(request, sender, sendResponse) {
+    function(request, sender, sendResponse) {
         if( request.message === "open_new_tab" ) {
-        chrome.tabs.create({"url": request.url});
+            chrome.tabs.create({"url": request.url});
         }
-        }
-        );
-
-chrome.runtime.onInstalled.addListener(function() {
-    chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
-        chrome.declarativeContent.onPageChanged.addRules([{
-            conditions: [new chrome.declarativeContent.PageStateMatcher({
-            pageUrl: {hostEquals: 'developer.chrome.com'},
-        })
-        ],
-        actions: [new chrome.declarativeContent.ShowPageAction()]
-    }]);
-});
+    }
+);

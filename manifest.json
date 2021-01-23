@@ -1,31 +1,36 @@
 {
-      "manifest_version": 2,
-      "name": "HTML Analyzer",
-      "version": "0.1",
-      "content_scripts": [
-              {
-                  "matches": [
-                      "<all_urls>"
-                      ],
-                  "js": ["jquery-3.5.1.min.js", "content.js"]
-              }
+  "manifest_version": 2,
+  "name": "HTML Analyzer",
+  "version": "0.2",
+  "permissions": [],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
       ],
-     "page_action": {
-        "default_popup": "popup.html",
-        "default_icon": {
-            "16": "icon.png",
-            "32": "icon.png",
-            "48": "icon.png",
-            "128": "icon.png"
-         }
-     },
-     "icons": {
-         "16": "icon.png",
-         "32": "icon.png",
-         "48": "icon.png",
-         "128": "icon.png"
-     },
-     "background": {
-           "scripts": ["background.js"]
-     }
+      "run_at": "document_start",
+      "js": ["jquery-3.5.1.min.js", "content.js"]
+    }
+  ],
+  "web_accessible_resources": ["html-analyzer-helper.js"],
+  "icons": {
+   "16": "icon.png",
+   "32": "icon.png",
+   "48": "icon.png",
+   "128": "icon.png"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_title": "HTML Analyzer",
+    "default_icon": {
+      "16": "icon.png",
+      "32": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  }
 }
