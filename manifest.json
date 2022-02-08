@@ -2,6 +2,7 @@
   "manifest_version": 2,
   "name": "HTML Analyzer",
   "version": "0.2",
+  "description":"Find hidden HTML comments on pages, check images for EXIF data, and more!",
   "permissions": [],
   "content_scripts": [
     {
@@ -32,5 +33,6 @@
       "48": "icon.png",
       "128": "icon.png"
     }
-  }
+  },
+  "content_security_policy":"script-src 'self' https://unpkg.com https://cdn.jsdelivr.net; object-src 'self'"
 }

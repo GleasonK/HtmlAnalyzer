@@ -2,29 +2,114 @@
 <html>
 <head>
 <style>
-
     body {
-    	min-width:400px;
+    	min-width:500px;
     	min-height:600px;
-    	max-width:800px;
+    	max-width:900px;
+        background: #FAFAFA;
+        margin: 0;
+        font-family: monospace;
     }
     pre {
     	margin:0px;
     	font-size:12px;
     }
     li {
-    	margin: 2px 0px;
+    	margin: 0px 0px 8px 0px;
+        text-align: left;
+        display: inline-block;
+        width: 95%;
+    }
+    h3 {
+        border-radius: 12px 12px 0px 0px;
+        background: #aaa;
+        color: white;
+        padding: 8px;
+        margin: 0;
+    }
+    #header{
+        background: #fff;
+        filter: drop-shadow(0px 2px 3px #ccc);
+        padding-left: 15px;
+    }
+    #title {
+        display: inline-block;
+        margin-right: 25px;
+    }
+    #analysis {
+        padding: 10px;
+    }
+    #images-exif {
+        list-style: none;
+        padding-left: 0;
+    }
+    .analysis-section {
+        padding: 0;
+        margin: 0px 0px 10px 0px;
+        background: #fff;
+        border: 1px solid #ccc;
+        filter: drop-shadow(0px 2px 2px #ccc);
+        text-align: center;
+        min-height: 10px;
+        overflow: hidden;
+    }
+    .button {
+        background-color: #aaa; /* Green */
+        border: none;
+        color: white;
+        padding: 6px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        border-radius: 4px;
+    }
+    .image-img {
+        width: 10%;
+        height: 10%;
+        vertical-align: top;
+    }
+    .image-analysis {
+        background: #fff;
+        filter: drop-shadow(0px 2px 3px #ccc);
+        width: 95%;
+        margin: 5px;
+    }
+    .image-data {
+        width: 85%;
+        display: inline-block;
+        padding: 5px;
+        overflow: hidden;
     }
 </style>
 </head>
 <body>
-    <h1>HTML Analyzer</h1>
-    <button id="refresh">Refresh</button>
-    <h3>Comments Hidden in HTML:</h3>
-    <ul id="html-comments"></ul>
-    <h3>Console Logs for Devs:</h3>
-    <ul id="console-logs"></ul>
+    <section id="header">
+        <h1 id="title">HTML Analyzer</h1>
+        <button id="refresh" class="button">Refresh</button>
+    </section>
+    <section id="analysis">
+        <h3>Comments Hidden in HTML:</h3>
+        <ul id="html-comments" class="analysis-section"></ul>
+        <h3>Image Analysis:</h3>
+        <ul id="images-exif" class="analysis-section">
+            <!--
+            <li>
+                <div class="image-analysis">
+                    <img src="https://i.stack.imgur.com/VKOg3.png?s=48&amp;g=1" class="image-img">
+                    <div class="image-data">
+                        <pre class="image-exif mdc-list-item__text">https://i.stack.imgur.com/VKOg3.png?s=48&amp;g=1</pre>
+                        <ul class="image-exif mdc-list-item__text"></ul>
+                    </div>
+                </div>
+            </li>
+            -->
+        </ul>
+        <h3>Console Logs for Devs:</h3>
+        <ul id="console-logs" class="analysis-section"></ul>
+    </section>
     <script src="messages.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/exif-js"></script>
     <script src="html-analyzer.js"></script>
 </body>
 </html>
